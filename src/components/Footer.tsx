@@ -29,12 +29,7 @@ export const Footer: React.FC = () => {
             <ul className="space-y-2.5 text-sm">
               <li>
                 <Link href="/" className="hover:text-brand-gold transition-colors">
-                  Inicio (Propuesta A)
-                </Link>
-              </li>
-              <li>
-                <Link href="/v2" className="hover:text-brand-gold transition-colors">
-                  Propuesta B (Split & Carrusel)
+                  Inicio
                 </Link>
               </li>
               <li>
