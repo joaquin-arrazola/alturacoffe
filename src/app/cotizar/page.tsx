@@ -9,7 +9,6 @@ import {
   Mail,
   Send,
   CheckCircle,
-  FileCheck2,
   ArrowRight,
   ShieldCheck,
 } from "lucide-react";
@@ -58,15 +57,15 @@ function QuotationFormContent() {
   };
 
   return (
-    <div className="pt-28 pb-24 bg-brand-dark min-h-screen">
+    <div className="pt-28 pb-24 bg-brand-bg min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="gold-badge mb-3">Comercio Exterior & Exportación</span>
-          <h1 className="font-serif text-3xl sm:text-5xl font-bold text-brand-textWhite mb-4">
+          <span className="brand-badge mb-3">Comercio Exterior & Exportación</span>
+          <h1 className="font-serif text-3xl sm:text-5xl font-bold text-brand-textDark mb-4">
             Solicitud de Lotes y Muestras
           </h1>
-          <p className="text-base sm:text-lg text-brand-muted leading-relaxed">
+          <p className="text-base sm:text-lg text-brand-textBody leading-relaxed">
             Conectamos nuestras cosechas de altura con tu tostaduría en
             cualquier parte del mundo. Selecciona tu lote de interés y
             coordinaremos disponibilidad, perfiles analíticos de cata y opciones
@@ -76,20 +75,20 @@ function QuotationFormContent() {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
           {/* Left Column: Form */}
-          <div className="lg:col-span-7 gold-card p-6 sm:p-10">
-            <h3 className="font-serif text-2xl font-bold text-brand-textWhite mb-6">
+          <div className="lg:col-span-7 gold-card p-6 sm:p-10 bg-white border border-gray-200 shadow-soft">
+            <h3 className="font-serif text-2xl font-bold text-brand-textDark mb-6">
               Datos para Cotización y Envío de Muestras
             </h3>
 
             {submitted ? (
-              <div className="p-8 rounded-xl bg-brand-gold/15 border border-brand-gold text-center space-y-4 animate-in fade-in duration-300">
-                <CheckCircle size={48} className="text-brand-gold mx-auto" />
-                <h4 className="font-serif text-2xl font-bold text-white">
+              <div className="p-8 rounded-xl bg-brand-primaryMuted border border-brand-primary text-center space-y-4 animate-in fade-in duration-300">
+                <CheckCircle size={48} className="text-brand-primary mx-auto" />
+                <h4 className="font-serif text-2xl font-bold text-brand-textDark">
                   ¡Solicitud Registrada Exitosamente!
                 </h4>
-                <p className="text-sm text-brand-muted max-w-md mx-auto">
+                <p className="text-sm text-brand-textBody max-w-md mx-auto">
                   Hemos recibido los requerimientos de tu tostaduría para el lote{" "}
-                  <strong className="text-brand-gold">
+                  <strong className="text-brand-primary">
                     {selectedCoffee ? selectedCoffee.name : "seleccionado"}
                   </strong>{" "}
                   ({formData.sacos} sacos, {formData.incoterm}).
@@ -100,7 +99,7 @@ function QuotationFormContent() {
                     href={`https://wa.me/59171791570?text=${whatsappMessage}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-gold-solid py-3 px-6 text-xs inline-flex items-center gap-2"
+                    className="btn-primary-solid py-3 px-6 text-xs inline-flex items-center gap-2"
                   >
                     <span>Enviar a WhatsApp Ahora</span>
                     <ArrowRight size={14} />
@@ -109,7 +108,7 @@ function QuotationFormContent() {
                   <button
                     type="button"
                     onClick={() => setSubmitted(false)}
-                    className="btn-gold-outline py-3 px-6 text-xs"
+                    className="btn-primary-outline py-3 px-6 text-xs"
                   >
                     Editar Solicitud
                   </button>
@@ -119,7 +118,7 @@ function QuotationFormContent() {
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs uppercase font-semibold text-brand-gold mb-1">
+                    <label className="block text-xs uppercase font-bold text-brand-primary mb-1">
                       Nombre del Contacto *
                     </label>
                     <input
@@ -130,12 +129,12 @@ function QuotationFormContent() {
                       onChange={(e) =>
                         setFormData({ ...formData, nombre: e.target.value })
                       }
-                      className="w-full bg-[#120f0d] border border-brand-gold/30 rounded px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-brand-gold"
+                      className="w-full bg-gray-50 border border-gray-300 rounded px-3.5 py-2.5 text-sm text-brand-textDark focus:outline-none focus:border-brand-primary focus:bg-white transition-colors"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-xs uppercase font-semibold text-brand-gold mb-1">
+                    <label className="block text-xs uppercase font-bold text-brand-primary mb-1">
                       Empresa / Tostaduría
                     </label>
                     <input
@@ -145,14 +144,14 @@ function QuotationFormContent() {
                       onChange={(e) =>
                         setFormData({ ...formData, empresa: e.target.value })
                       }
-                      className="w-full bg-[#120f0d] border border-brand-gold/30 rounded px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-brand-gold"
+                      className="w-full bg-gray-50 border border-gray-300 rounded px-3.5 py-2.5 text-sm text-brand-textDark focus:outline-none focus:border-brand-primary focus:bg-white transition-colors"
                     />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs uppercase font-semibold text-brand-gold mb-1">
+                    <label className="block text-xs uppercase font-bold text-brand-primary mb-1">
                       Correo Electrónico *
                     </label>
                     <input
@@ -163,12 +162,12 @@ function QuotationFormContent() {
                       onChange={(e) =>
                         setFormData({ ...formData, email: e.target.value })
                       }
-                      className="w-full bg-[#120f0d] border border-brand-gold/30 rounded px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-brand-gold"
+                      className="w-full bg-gray-50 border border-gray-300 rounded px-3.5 py-2.5 text-sm text-brand-textDark focus:outline-none focus:border-brand-primary focus:bg-white transition-colors"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-xs uppercase font-semibold text-brand-gold mb-1">
+                    <label className="block text-xs uppercase font-bold text-brand-primary mb-1">
                       WhatsApp Internacional
                     </label>
                     <input
@@ -178,14 +177,14 @@ function QuotationFormContent() {
                       onChange={(e) =>
                         setFormData({ ...formData, telefono: e.target.value })
                       }
-                      className="w-full bg-[#120f0d] border border-brand-gold/30 rounded px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-brand-gold"
+                      className="w-full bg-gray-50 border border-gray-300 rounded px-3.5 py-2.5 text-sm text-brand-textDark focus:outline-none focus:border-brand-primary focus:bg-white transition-colors"
                     />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs uppercase font-semibold text-brand-gold mb-1">
+                    <label className="block text-xs uppercase font-bold text-brand-primary mb-1">
                       País de Destino
                     </label>
                     <input
@@ -195,12 +194,12 @@ function QuotationFormContent() {
                       onChange={(e) =>
                         setFormData({ ...formData, pais: e.target.value })
                       }
-                      className="w-full bg-[#120f0d] border border-brand-gold/30 rounded px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-brand-gold"
+                      className="w-full bg-gray-50 border border-gray-300 rounded px-3.5 py-2.5 text-sm text-brand-textDark focus:outline-none focus:border-brand-primary focus:bg-white transition-colors"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-xs uppercase font-semibold text-brand-gold mb-1">
+                    <label className="block text-xs uppercase font-bold text-brand-primary mb-1">
                       Incoterm Preferido
                     </label>
                     <select
@@ -208,7 +207,7 @@ function QuotationFormContent() {
                       onChange={(e) =>
                         setFormData({ ...formData, incoterm: e.target.value })
                       }
-                      className="w-full bg-[#120f0d] border border-brand-gold/30 rounded px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-brand-gold"
+                      className="w-full bg-gray-50 border border-gray-300 rounded px-3.5 py-2.5 text-sm text-brand-textDark focus:outline-none focus:border-brand-primary focus:bg-white transition-colors"
                     >
                       <option value="FOB Puerto de Arica (Chile)">
                         FOB Puerto de Arica (Chile)
@@ -228,7 +227,7 @@ function QuotationFormContent() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-12 gap-4">
                   <div className="sm:col-span-8">
-                    <label className="block text-xs uppercase font-semibold text-brand-gold mb-1">
+                    <label className="block text-xs uppercase font-bold text-brand-primary mb-1">
                       Lote de Interés
                     </label>
                     <select
@@ -236,7 +235,7 @@ function QuotationFormContent() {
                       onChange={(e) =>
                         setFormData({ ...formData, loteId: e.target.value })
                       }
-                      className="w-full bg-[#120f0d] border border-brand-gold/30 rounded px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-brand-gold"
+                      className="w-full bg-gray-50 border border-gray-300 rounded px-3.5 py-2.5 text-sm text-brand-textDark focus:outline-none focus:border-brand-primary focus:bg-white transition-colors"
                     >
                       <option value="">-- Seleccionar lote o cotización general --</option>
                       {COFFEE_VARIETIES.map((c) => (
@@ -248,7 +247,7 @@ function QuotationFormContent() {
                   </div>
 
                   <div className="sm:col-span-4">
-                    <label className="block text-xs uppercase font-semibold text-brand-gold mb-1">
+                    <label className="block text-xs uppercase font-bold text-brand-primary mb-1">
                       Cantidad (Sacos 60kg)
                     </label>
                     <input
@@ -262,13 +261,13 @@ function QuotationFormContent() {
                           sacos: parseInt(e.target.value) || 1,
                         })
                       }
-                      className="w-full bg-[#120f0d] border border-brand-gold/30 rounded px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-brand-gold"
+                      className="w-full bg-gray-50 border border-gray-300 rounded px-3.5 py-2.5 text-sm text-brand-textDark focus:outline-none focus:border-brand-primary focus:bg-white transition-colors"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-xs uppercase font-semibold text-brand-gold mb-1">
+                  <label className="block text-xs uppercase font-bold text-brand-primary mb-1">
                     Requerimientos Específicos o Envío de Muestras
                   </label>
                   <textarea
@@ -278,13 +277,13 @@ function QuotationFormContent() {
                     onChange={(e) =>
                       setFormData({ ...formData, mensaje: e.target.value })
                     }
-                    className="w-full bg-[#120f0d] border border-brand-gold/30 rounded px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-brand-gold"
+                    className="w-full bg-gray-50 border border-gray-300 rounded px-3.5 py-2.5 text-sm text-brand-textDark focus:outline-none focus:border-brand-primary focus:bg-white transition-colors"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="btn-gold-solid w-full py-3.5 flex items-center justify-center gap-2 text-xs"
+                  className="btn-primary-solid w-full py-3.5 flex items-center justify-center gap-2 text-xs"
                 >
                   <Send size={15} />
                   <span>ENVIAR SOLICITUD DE COTIZACIÓN</span>
@@ -294,12 +293,12 @@ function QuotationFormContent() {
           </div>
 
           {/* Right Column: Direct Info & Export Standards */}
-          <div className="lg:col-span-5 gold-card p-6 sm:p-10 space-y-6">
+          <div className="lg:col-span-5 gold-card p-6 sm:p-10 space-y-6 bg-white border border-gray-200 shadow-soft">
             <div>
-              <h3 className="font-serif text-2xl font-bold text-brand-gold mb-2">
+              <h3 className="font-serif text-2xl font-bold text-brand-primary mb-2">
                 Atención Directa
               </h3>
-              <p className="text-xs text-brand-muted mb-6">
+              <p className="text-xs text-brand-textMuted mb-6">
                 Para importadores que requieren respuesta ágil, disponibilidad
                 en tiempo real o confirmación de sets de muestras:
               </p>
@@ -310,14 +309,14 @@ function QuotationFormContent() {
                   <Phone size={20} />
                 </div>
                 <div>
-                  <span className="text-[11px] uppercase tracking-wider text-brand-muted font-bold block">
+                  <span className="text-[11px] uppercase tracking-wider text-brand-textMuted font-bold block">
                     WhatsApp Comercial
                   </span>
                   <a
                     href="https://wa.me/59171791570?text=Hola%20Altura%20Coffee%20Exports,%20deseo%20solicitar%20informaci%C3%B3n%20y%20cotizaci%C3%B3n."
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-serif text-lg font-bold text-white hover:text-brand-gold transition-colors"
+                    className="font-serif text-lg font-bold text-brand-textDark hover:text-brand-primary transition-colors"
                   >
                     +591 71791570
                   </a>
@@ -325,17 +324,17 @@ function QuotationFormContent() {
               </div>
 
               {/* Email card */}
-              <div className="p-4 rounded-xl bg-brand-gold/10 border border-brand-gold/30 mb-6 flex items-center gap-4">
-                <div className="w-11 h-11 rounded-full bg-brand-gold/20 text-brand-gold flex items-center justify-center flex-shrink-0">
+              <div className="p-4 rounded-xl bg-brand-primaryMuted border border-brand-primary/20 mb-6 flex items-center gap-4">
+                <div className="w-11 h-11 rounded-full bg-brand-primary text-white flex items-center justify-center flex-shrink-0">
                   <Mail size={20} />
                 </div>
                 <div>
-                  <span className="text-[11px] uppercase tracking-wider text-brand-muted font-bold block">
+                  <span className="text-[11px] uppercase tracking-wider text-brand-textMuted font-bold block">
                     Comercio Exterior
                   </span>
                   <a
                     href="mailto:export@alturacoffee.com"
-                    className="font-serif text-base font-bold text-white hover:text-brand-gold transition-colors block"
+                    className="font-serif text-base font-bold text-brand-textDark hover:text-brand-primary transition-colors block"
                   >
                     export@alturacoffee.com
                   </a>
@@ -343,33 +342,33 @@ function QuotationFormContent() {
               </div>
 
               {/* Standards Checklist */}
-              <div className="pt-4 border-t border-brand-gold/15">
-                <h5 className="text-xs uppercase tracking-wider text-brand-gold font-bold mb-4">
+              <div className="pt-4 border-t border-gray-200">
+                <h5 className="text-xs uppercase tracking-wider text-brand-primary font-bold mb-4">
                   Estándares de Exportación
                 </h5>
-                <ul className="space-y-3 text-xs text-brand-muted">
+                <ul className="space-y-3 text-xs text-brand-textBody">
                   <li className="flex items-start gap-2.5">
-                    <ShieldCheck size={16} className="text-brand-gold flex-shrink-0 mt-0.5" />
+                    <ShieldCheck size={16} className="text-brand-primary flex-shrink-0 mt-0.5" />
                     <span>Muestras verdes de 250g con ficha analítica SCA.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
-                    <ShieldCheck size={16} className="text-brand-gold flex-shrink-0 mt-0.5" />
+                    <ShieldCheck size={16} className="text-brand-primary flex-shrink-0 mt-0.5" />
                     <span>Sacos de yute de 60 kg protegidos con bolsa GrainPro / Ecotact.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
-                    <ShieldCheck size={16} className="text-brand-gold flex-shrink-0 mt-0.5" />
+                    <ShieldCheck size={16} className="text-brand-primary flex-shrink-0 mt-0.5" />
                     <span>Trazabilidad de finca, piso ecológico y altitud certificada.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
-                    <ShieldCheck size={16} className="text-brand-gold flex-shrink-0 mt-0.5" />
+                    <ShieldCheck size={16} className="text-brand-primary flex-shrink-0 mt-0.5" />
                     <span>Logística de consolidación FOB Puerto de Arica o CIF global.</span>
                   </li>
                 </ul>
               </div>
 
-              <div className="pt-6 border-t border-brand-gold/15 text-xs text-brand-dim">
+              <div className="pt-6 border-t border-gray-200 text-xs text-brand-textMuted">
                 ¿Solo deseas hacer una consulta institucional? Visita nuestra página de{" "}
-                <Link href="/contacto" className="text-brand-gold hover:underline">
+                <Link href="/contacto" className="text-brand-primary font-semibold hover:underline">
                   Contacto
                 </Link>
                 .
@@ -386,7 +385,7 @@ export default function CotizarPage() {
   return (
     <Suspense
       fallback={
-        <div className="pt-32 text-center text-brand-gold">
+        <div className="pt-32 text-center text-brand-primary">
           Cargando formulario de cotización...
         </div>
       }

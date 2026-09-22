@@ -16,7 +16,7 @@ export const ProductActions: React.FC<{ coffee: CoffeeVariety }> = ({ coffee }) 
         }%20SCA).`}
         target="_blank"
         rel="noopener noreferrer"
-        className="btn-gold-solid w-full py-4 text-center flex items-center justify-center gap-2"
+        className="btn-primary-solid w-full py-4 text-center flex items-center justify-center gap-2"
       >
         <span>Cotizar este Lote por WhatsApp (+591 71791570)</span>
       </a>
@@ -25,7 +25,7 @@ export const ProductActions: React.FC<{ coffee: CoffeeVariety }> = ({ coffee }) 
         <button
           type="button"
           onClick={() => window.print()}
-          className="btn-gold-outline w-full py-2.5 flex items-center justify-center gap-2 text-xs"
+          className="btn-primary-outline w-full py-2.5 flex items-center justify-center gap-2 text-xs"
         >
           <FileText size={15} />
           <span>Imprimir Ficha Técnica</span>
@@ -33,7 +33,7 @@ export const ProductActions: React.FC<{ coffee: CoffeeVariety }> = ({ coffee }) 
 
         <Link
           href={`/cotizar?lote=${coffee.id}`}
-          className="btn-gold-outline w-full py-2.5 flex items-center justify-center gap-2 text-xs"
+          className="btn-primary-outline w-full py-2.5 flex items-center justify-center gap-2 text-xs"
         >
           <Calculator size={15} />
           <span>Cotizador Formal</span>

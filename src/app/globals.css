@@ -5,16 +5,16 @@
 @tailwind utilities;
 
 :root {
-  --bg-main: #0c0b0a;
-  --surface-dark: #12100e;
-  --surface-card: #171512;
-  --primary-gold: #c5a059;
-  --primary-gold-light: #dfbe7d;
-  --primary-gold-hover: #d4af65;
-  --text-white: #f5f0eb;
-  --text-body: #ded7ce;
-  --text-muted: #c4bbb0;
-  --text-dim: #9e9385;
+  --bg-main: #f4f5f7;
+  --surface-card: #ffffff;
+  --surface-alt: #eaedf1;
+  --primary: #1b4332;
+  --primary-light: #2d6a4f;
+  --primary-hover: #143326;
+  --text-dark: #18181b;
+  --text-body: #3f3f46;
+  --text-muted: #71717a;
+  --border-subtle: #e4e4e7;
 }
 
 body {
@@ -25,95 +25,102 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Custom Gold and Luxury Utility Classes */
 .font-serif {
   font-family: 'Playfair Display', Georgia, serif;
 }
 
-/* Buttons */
-.btn-gold-solid {
+/* Primary Solid Button */
+.btn-gold-solid,
+.btn-primary-solid {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #d4af37 0%, #aa8954 100%);
-  color: #0c0a09;
+  background: linear-gradient(135deg, #1b4332 0%, #143326 100%);
+  color: #ffffff;
   font-weight: 700;
   font-size: 0.82rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   padding: 0.75rem 1.75rem;
-  border-radius: 2px;
-  border: 1px solid rgba(212, 175, 55, 0.4);
-  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.25);
+  border-radius: 4px;
+  border: 1px solid rgba(27, 67, 50, 0.4);
+  box-shadow: 0 4px 14px rgba(27, 67, 50, 0.2);
   transition: all 0.25s ease;
   text-decoration: none;
 }
 
-.btn-gold-solid:hover {
-  background: linear-gradient(135deg, #dfbe7d 0%, #c5a059 100%);
-  box-shadow: 0 6px 22px rgba(212, 175, 55, 0.45);
+.btn-gold-solid:hover,
+.btn-primary-solid:hover {
+  background: linear-gradient(135deg, #2d6a4f 0%, #1b4332 100%);
+  box-shadow: 0 6px 20px rgba(27, 67, 50, 0.35);
   transform: translateY(-2px);
-  color: #0c0a09;
+  color: #ffffff;
 }
 
-.btn-gold-outline {
+/* Primary Outline Button */
+.btn-gold-outline,
+.btn-primary-outline {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: transparent;
-  color: var(--primary-gold);
-  border: 1px solid rgba(197, 160, 89, 0.6);
-  font-weight: 600;
+  background: #ffffff;
+  color: var(--primary);
+  border: 1.5px solid var(--primary);
+  font-weight: 700;
   font-size: 0.82rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   padding: 0.75rem 1.75rem;
-  border-radius: 2px;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   transition: all 0.25s ease;
   text-decoration: none;
 }
 
-.btn-gold-outline:hover {
-  background: rgba(197, 160, 89, 0.12);
-  border-color: var(--primary-gold);
-  color: var(--primary-gold-light);
+.btn-gold-outline:hover,
+.btn-primary-outline:hover {
+  background: rgba(27, 67, 50, 0.08);
+  border-color: var(--primary-light);
+  color: var(--primary-hover);
   transform: translateY(-2px);
 }
 
-/* Cards */
-.gold-card {
-  background: rgba(23, 21, 18, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(197, 160, 89, 0.18);
-  border-radius: 6px;
+/* Card Surfaces */
+.gold-card,
+.brand-card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05), 0 2px 6px -2px rgba(0, 0, 0, 0.02);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.gold-card:hover {
-  border-color: rgba(197, 160, 89, 0.45);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(197, 160, 89, 0.1);
-  transform: translateY(-4px);
+.gold-card:hover,
+.brand-card:hover {
+  border-color: rgba(27, 67, 50, 0.3);
+  box-shadow: 0 12px 30px -4px rgba(0, 0, 0, 0.09), 0 4px 10px -3px rgba(27, 67, 50, 0.05);
+  transform: translateY(-3px);
 }
 
 /* Badges */
 .badge-sca {
-  background: linear-gradient(135deg, #c5a059 0%, #aa8954 100%);
-  color: #0c0a09;
+  background: #1b4332;
+  color: #ffffff;
   font-weight: 800;
   font-size: 0.78rem;
   letter-spacing: 0.06em;
   padding: 0.35rem 0.8rem;
-  border-radius: 3px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(27, 67, 50, 0.3);
   display: inline-flex;
   align-items: center;
 }
 
-.gold-badge {
-  background: rgba(197, 160, 89, 0.12);
-  color: var(--primary-gold);
-  border: 1px solid rgba(197, 160, 89, 0.3);
+.gold-badge,
+.brand-badge {
+  background: rgba(27, 67, 50, 0.09);
+  color: #1b4332;
+  border: 1px solid rgba(27, 67, 50, 0.2);
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -128,12 +135,12 @@ body {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #0c0b0a;
+  background: #f4f5f7;
 }
 ::-webkit-scrollbar-thumb {
-  background: #2a2520;
+  background: #cbd5e1;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #c5a059;
+  background: #1b4332;
 }

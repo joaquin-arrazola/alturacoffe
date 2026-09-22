@@ -11,7 +11,6 @@ import {
   ChevronRight,
   MapPin,
   ArrowRight,
-  CheckCircle2,
   Instagram,
   Facebook,
   Phone,
@@ -90,45 +89,45 @@ export default function HomePage() {
   ];
 
   return (
-    <div className="flex flex-col bg-brand-dark min-h-screen">
+    <div className="flex flex-col bg-brand-bg min-h-screen">
       {/* 1. SPLIT HERO SECTION */}
       <section className="relative min-h-[92vh] flex items-center justify-center pt-28 pb-16 overflow-hidden">
-        {/* Background Image */}
+        {/* Background Image with Light Overlay */}
         <div className="absolute inset-0 z-0">
           <Image
             src={IMAGES.heroV2Bg}
-            alt="Granos de café cayendo al atardecer andino"
+            alt="Granos de café tostados y atardecer andino"
             fill
             priority
-            className="object-cover object-center filter brightness-[0.68] contrast-[1.1] saturate-[1.15]"
+            className="object-cover object-center filter brightness-[0.95] contrast-[1.05]"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0c0a09]/90 via-[#0c0a09]/60 to-[#0c0a09]/80" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0c0b0a] via-transparent to-[#0c0b0a]/60" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#f4f5f7]/95 via-[#f4f5f7]/85 to-[#f4f5f7]/60" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#f4f5f7] via-transparent to-[#f4f5f7]/60" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            {/* Left Column: Glassmorphic Logo Showcase */}
+            {/* Left Column: Card Showcase */}
             <div className="lg:col-span-5 flex justify-center">
-              <div className="w-full max-w-md bg-[#14110f]/75 backdrop-blur-xl border border-brand-gold/30 rounded-2xl p-8 sm:p-10 text-center shadow-2xl relative group hover:border-brand-gold/60 transition-all duration-300">
-                {/* Gold radial ambient glow */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-brand-gold/15 rounded-full blur-3xl pointer-events-none" />
+              <div className="w-full max-w-md bg-white/95 backdrop-blur-xl border border-gray-200/90 rounded-2xl p-8 sm:p-10 text-center shadow-soft-lg relative group transition-all duration-300">
+                {/* Emerald ambient glow */}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-brand-primary/10 rounded-full blur-3xl pointer-events-none" />
 
                 <div className="relative z-10 flex flex-col items-center">
                   <BrandLogo variant="stacked" />
 
                   {/* Trust Pills */}
                   <div className="flex flex-wrap items-center justify-center gap-2 mt-8">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-black/60 border border-brand-gold/25 rounded-full text-xs text-brand-muted">
-                      <span className="w-1.5 h-1.5 rounded-full bg-brand-gold" />
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-brand-bg border border-gray-200 rounded-full text-xs font-semibold text-brand-primary">
+                      <span className="w-1.5 h-1.5 rounded-full bg-brand-primary" />
                       Bolivia
                     </span>
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-black/60 border border-brand-gold/25 rounded-full text-xs text-brand-muted">
-                      <span className="w-1.5 h-1.5 rounded-full bg-brand-gold" />
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-brand-bg border border-gray-200 rounded-full text-xs font-semibold text-brand-primary">
+                      <span className="w-1.5 h-1.5 rounded-full bg-brand-primary" />
                       2.400 msnm
                     </span>
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-black/60 border border-brand-gold/25 rounded-full text-xs text-brand-muted">
-                      <span className="w-1.5 h-1.5 rounded-full bg-brand-gold" />
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-brand-bg border border-gray-200 rounded-full text-xs font-semibold text-brand-primary">
+                      <span className="w-1.5 h-1.5 rounded-full bg-brand-primary" />
                       SCA 84+ Certificado
                     </span>
                   </div>
@@ -138,65 +137,65 @@ export default function HomePage() {
 
             {/* Right Column: Hero Content */}
             <div className="lg:col-span-7 flex flex-col items-start text-left">
-              <span className="inline-block py-1 px-3 mb-4 rounded-full border border-brand-gold/40 bg-brand-gold/10 text-brand-gold text-xs uppercase tracking-[0.25em] font-bold">
+              <span className="inline-block py-1.5 px-4 mb-4 rounded-full border border-brand-primary/20 bg-brand-primary/10 text-brand-primary text-xs uppercase tracking-[0.25em] font-bold">
                 EXPORTADORA DE CAFÉ ESPECIALIDAD
               </span>
 
-              <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-brand-textWhite leading-[1.1] mb-6">
+              <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-brand-textDark leading-[1.1] mb-6">
                 <span>El Café de las</span>
                 <br />
                 <span>Alturas,</span>
                 <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#dfbe7d] via-[#c5a059] to-[#aa8954]">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary via-brand-primaryLight to-[#143326]">
                   Para el Mundo
                 </span>
               </h1>
 
-              <p className="text-base sm:text-lg text-brand-muted leading-relaxed mb-8 max-w-xl">
+              <p className="text-base sm:text-lg text-brand-textBody leading-relaxed mb-8 max-w-xl">
                 Conectamos los mejores cafés de alta montaña con importadores,
                 tostadores y compradores internacionales que exigen lo extraordinario.
               </p>
 
               <div className="flex flex-wrap items-center gap-4 mb-10 w-full sm:w-auto">
-                <Link href="/cotizar" className="btn-gold-solid px-7 py-3 text-xs">
+                <Link href="/cotizar" className="btn-primary-solid px-7 py-3 text-xs">
                   SOLICITAR COTIZACIÓN
                 </Link>
-                <a href="#carrusel-destacado" className="btn-gold-outline px-7 py-3 text-xs">
+                <a href="#carrusel-destacado" className="btn-primary-outline px-7 py-3 text-xs">
                   CONOCER VARIEDADES
                 </a>
               </div>
 
               {/* Metrics Grid */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 w-full pt-6 border-t border-brand-gold/20">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 w-full pt-6 border-t border-gray-300">
                 <div>
-                  <div className="font-serif text-2xl sm:text-3xl font-bold text-brand-gold">
+                  <div className="font-serif text-2xl sm:text-3xl font-bold text-brand-primary">
                     2.400m
                   </div>
-                  <div className="text-[11px] text-brand-muted uppercase tracking-wider mt-0.5">
+                  <div className="text-[11px] text-brand-textMuted uppercase tracking-wider font-semibold mt-0.5">
                     Altitud Máxima
                   </div>
                 </div>
                 <div>
-                  <div className="font-serif text-2xl sm:text-3xl font-bold text-brand-gold">
+                  <div className="font-serif text-2xl sm:text-3xl font-bold text-brand-primary">
                     15+
                   </div>
-                  <div className="text-[11px] text-brand-muted uppercase tracking-wider mt-0.5">
+                  <div className="text-[11px] text-brand-textMuted uppercase tracking-wider font-semibold mt-0.5">
                     Años Experiencia
                   </div>
                 </div>
                 <div>
-                  <div className="font-serif text-2xl sm:text-3xl font-bold text-brand-gold">
+                  <div className="font-serif text-2xl sm:text-3xl font-bold text-brand-primary">
                     30+
                   </div>
-                  <div className="text-[11px] text-brand-muted uppercase tracking-wider mt-0.5">
+                  <div className="text-[11px] text-brand-textMuted uppercase tracking-wider font-semibold mt-0.5">
                     Países Destino
                   </div>
                 </div>
                 <div>
-                  <div className="font-serif text-2xl sm:text-3xl font-bold text-brand-gold">
+                  <div className="font-serif text-2xl sm:text-3xl font-bold text-brand-primary">
                     100%
                   </div>
-                  <div className="text-[11px] text-brand-muted uppercase tracking-wider mt-0.5">
+                  <div className="text-[11px] text-brand-textMuted uppercase tracking-wider font-semibold mt-0.5">
                     Especialidad
                   </div>
                 </div>
@@ -207,14 +206,14 @@ export default function HomePage() {
       </section>
 
       {/* 2. CAROUSEL SECTION */}
-      <section id="carrusel-destacado" className="py-24 bg-[#0e0c0a] relative scroll-mt-20">
+      <section id="carrusel-destacado" className="py-24 bg-brand-bgSubtle relative scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-14">
-            <span className="gold-badge mb-3">SELECCIÓN DE ORIGEN</span>
-            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-brand-textWhite mb-4">
+            <span className="brand-badge mb-3">SELECCIÓN DE ORIGEN</span>
+            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-brand-textDark mb-4">
               Lotes Insigne de Temporada
             </h2>
-            <p className="text-brand-muted leading-relaxed">
+            <p className="text-brand-textBody leading-relaxed">
               Descubre nuestras cosechas más premiadas de alta montaña,
               seleccionadas meticulosamente para compradores internacionales y
               tostadurías de especialidad.
@@ -222,28 +221,28 @@ export default function HomePage() {
           </div>
 
           {/* Carousel Card */}
-          <div className="gold-card p-6 sm:p-10 relative overflow-hidden">
+          <div className="gold-card p-6 sm:p-10 relative overflow-hidden bg-white border border-gray-200">
             {/* Progress bar */}
-            <div className="absolute top-0 left-0 right-0 h-1 bg-white/5">
+            <div className="absolute top-0 left-0 right-0 h-1 bg-gray-100">
               <div
                 key={currentSlide}
-                className="h-full bg-gradient-to-r from-brand-gold to-brand-goldLight animate-[shrink_6.5s_linear_forwards]"
+                className="h-full bg-gradient-to-r from-brand-primary to-brand-primaryLight"
                 style={{ width: "100%" }}
               />
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center pt-4">
               {/* Slide Image */}
-              <div className="lg:col-span-5 relative h-72 sm:h-96 w-full rounded-xl overflow-hidden bg-black/60 shadow-2xl">
+              <div className="lg:col-span-5 relative h-72 sm:h-96 w-full rounded-xl overflow-hidden bg-gray-100 shadow-md">
                 <Image
                   src={activeLot.image}
                   alt={activeLot.name}
                   fill
                   className="object-cover object-center transition-all duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
 
-                <span className="absolute top-4 left-4 px-3 py-1 bg-black/80 backdrop-blur-md border border-brand-gold/30 text-brand-gold text-xs font-semibold rounded">
+                <span className="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-md border border-gray-200 text-brand-primary text-xs font-bold rounded">
                   Proceso {activeLot.process}
                 </span>
 
@@ -255,39 +254,39 @@ export default function HomePage() {
               {/* Slide Content */}
               <div className="lg:col-span-7 flex flex-col justify-between">
                 <div>
-                  <span className="text-xs uppercase tracking-[0.2em] text-brand-gold font-bold">
+                  <span className="text-xs uppercase tracking-[0.2em] text-brand-primary font-bold">
                     LOTE EXCLUSIVO · MICRO-LOT
                   </span>
 
-                  <h3 className="font-serif text-3xl sm:text-4xl font-bold text-brand-textWhite mt-1 mb-2">
+                  <h3 className="font-serif text-3xl sm:text-4xl font-bold text-brand-textDark mt-1 mb-2">
                     {activeLot.name}
                   </h3>
 
-                  <div className="flex items-center gap-1.5 text-brand-dim text-xs sm:text-sm mb-4">
-                    <MapPin size={15} className="text-brand-gold" />
+                  <div className="flex items-center gap-1.5 text-brand-textMuted text-xs sm:text-sm mb-4">
+                    <MapPin size={15} className="text-brand-primary" />
                     <span>{activeLot.region} · {activeLot.altitude}</span>
                   </div>
 
                   {/* Sensory notes callout box */}
-                  <div className="p-4 bg-brand-gold/10 border border-brand-gold/25 rounded-lg mb-4">
-                    <span className="text-[11px] uppercase tracking-wider text-brand-gold font-semibold block mb-1">
+                  <div className="p-4 bg-brand-primaryMuted border border-brand-primary/20 rounded-lg mb-4">
+                    <span className="text-[11px] uppercase tracking-wider text-brand-primary font-bold block mb-1">
                       Perfil y Notas de Cata
                     </span>
-                    <p className="font-serif italic text-base sm:text-lg text-brand-goldLight">
+                    <p className="font-serif italic text-base sm:text-lg text-brand-primary font-semibold">
                       {activeLot.tastingNotes.join(" · ")}
                     </p>
                   </div>
 
-                  <p className="text-sm sm:text-base text-brand-muted leading-relaxed mb-6">
+                  <p className="text-sm sm:text-base text-brand-textBody leading-relaxed mb-6">
                     {activeLot.longDescription}
                   </p>
                 </div>
 
                 {/* Actions */}
-                <div className="flex flex-wrap items-center gap-4 pt-4 border-t border-brand-gold/15">
+                <div className="flex flex-wrap items-center gap-4 pt-4 border-t border-gray-100">
                   <Link
                     href={`/productos/${activeLot.slug}`}
-                    className="btn-gold-solid text-xs py-2.5 px-5 inline-flex items-center gap-2"
+                    className="btn-primary-solid text-xs py-2.5 px-5 inline-flex items-center gap-2"
                   >
                     <span>Ver Ficha Técnica</span>
                     <ArrowRight size={13} />
@@ -299,7 +298,7 @@ export default function HomePage() {
                     )}.`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-gold-outline text-xs py-2.5 px-5 inline-flex items-center gap-2"
+                    className="btn-primary-outline text-xs py-2.5 px-5 inline-flex items-center gap-2"
                   >
                     <span>Cotizar por WhatsApp</span>
                   </a>
@@ -308,14 +307,14 @@ export default function HomePage() {
             </div>
 
             {/* Carousel Controls */}
-            <div className="mt-8 pt-6 border-t border-brand-gold/15 flex items-center justify-between">
+            <div className="mt-8 pt-6 border-t border-gray-100 flex items-center justify-between">
               {/* Prev button */}
               <button
                 type="button"
                 onClick={() =>
                   setCurrentSlide((prev) => (prev === 0 ? totalSlides - 1 : prev - 1))
                 }
-                className="p-2.5 rounded-full border border-brand-gold/30 hover:border-brand-gold text-brand-gold hover:bg-brand-gold/10 transition-colors"
+                className="p-2.5 rounded-full border border-gray-300 hover:border-brand-primary text-brand-primary hover:bg-brand-primary/10 transition-colors"
                 aria-label="Anterior variedad"
               >
                 <ChevronLeft size={20} />
@@ -329,8 +328,8 @@ export default function HomePage() {
                     onClick={() => setCurrentSlide(idx)}
                     className={`h-2.5 rounded-full transition-all duration-300 ${
                       idx === currentSlide
-                        ? "w-8 bg-brand-gold"
-                        : "w-2.5 bg-white/20 hover:bg-white/40"
+                        ? "w-8 bg-brand-primary"
+                        : "w-2.5 bg-gray-300 hover:bg-gray-400"
                     }`}
                     aria-label={`Ir a ${lot.name}`}
                   />
@@ -343,7 +342,7 @@ export default function HomePage() {
                 onClick={() =>
                   setCurrentSlide((prev) => (prev + 1) % totalSlides)
                 }
-                className="p-2.5 rounded-full border border-brand-gold/30 hover:border-brand-gold text-brand-gold hover:bg-brand-gold/10 transition-colors"
+                className="p-2.5 rounded-full border border-gray-300 hover:border-brand-primary text-brand-primary hover:bg-brand-primary/10 transition-colors"
                 aria-label="Siguiente variedad"
               >
                 <ChevronRight size={20} />
@@ -354,14 +353,14 @@ export default function HomePage() {
       </section>
 
       {/* 3. INTERACTIVE GRAIN ROUTE & CHANNELS */}
-      <section className="py-24 bg-brand-dark relative">
+      <section className="py-24 bg-brand-bg relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="gold-badge mb-3">TRAZABILIDAD Y CONEXIÓN DIRECTA</span>
-            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-brand-textWhite mb-4">
+            <span className="brand-badge mb-3">TRAZABILIDAD Y CONEXIÓN DIRECTA</span>
+            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-brand-textDark mb-4">
               De la Montaña a Tu Tostadora
             </h2>
-            <p className="text-brand-muted leading-relaxed">
+            <p className="text-brand-textBody leading-relaxed">
               Interactúa con cada etapa de nuestra ruta de café de especialidad y
               conéctate directamente con nuestros canales oficiales de exportación.
             </p>
@@ -369,12 +368,12 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             {/* Left Box: Interactive Route */}
-            <div className="lg:col-span-7 gold-card p-6 sm:p-8">
+            <div className="lg:col-span-7 gold-card p-6 sm:p-8 bg-white border border-gray-200">
               <div className="mb-6">
-                <span className="text-[11px] uppercase tracking-[0.2em] text-brand-gold font-bold">
+                <span className="text-[11px] uppercase tracking-[0.2em] text-brand-primary font-bold">
                   RUTA INTERACTIVA DEL GRANO
                 </span>
-                <h3 className="font-serif text-2xl font-bold text-brand-textWhite mt-1">
+                <h3 className="font-serif text-2xl font-bold text-brand-textDark mt-1">
                   Selecciona una etapa del viaje
                 </h3>
               </div>
@@ -391,44 +390,44 @@ export default function HomePage() {
                       onClick={() => setActiveTab(idx)}
                       className={`p-3 rounded-md border text-left transition-all duration-200 flex flex-col justify-between h-20 ${
                         isActive
-                          ? "bg-brand-gold/20 border-brand-gold text-brand-gold shadow-md"
-                          : "bg-black/30 border-brand-gold/15 text-brand-muted hover:border-brand-gold/40 hover:text-white"
+                          ? "bg-brand-primary text-white border-brand-primary shadow-sm"
+                          : "bg-gray-50 border-gray-200 text-brand-textBody hover:border-brand-primary/40 hover:bg-white"
                       }`}
                     >
                       <div className="flex items-center justify-between w-full">
-                        <span className="font-serif text-sm font-bold opacity-75">
+                        <span className="font-serif text-sm font-bold opacity-80">
                           {step.num}
                         </span>
                         <Icon size={16} />
                       </div>
-                      <span className="text-xs font-semibold">{step.name}</span>
+                      <span className="text-xs font-bold">{step.name}</span>
                     </button>
                   );
                 })}
               </div>
 
               {/* Tab Content Pane */}
-              <div className="p-6 bg-black/40 border border-brand-gold/20 rounded-xl animate-in fade-in duration-300">
-                <span className="gold-badge mb-3">
+              <div className="p-6 bg-[#f8fafc] border border-gray-200 rounded-xl">
+                <span className="brand-badge mb-3">
                   {processSteps[activeTab].subtitle}
                 </span>
-                <h4 className="font-serif text-xl sm:text-2xl font-bold text-brand-textWhite mb-3">
+                <h4 className="font-serif text-xl sm:text-2xl font-bold text-brand-textDark mb-3">
                   {processSteps[activeTab].title}
                 </h4>
-                <p className="text-sm text-brand-muted leading-relaxed mb-6">
+                <p className="text-sm text-brand-textBody leading-relaxed mb-6">
                   {processSteps[activeTab].desc}
                 </p>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-4 border-t border-brand-gold/15">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-4 border-t border-gray-200">
                   {processSteps[activeTab].pills.map((pill, i) => (
                     <div
                       key={i}
-                      className="p-3 rounded bg-white/5 border border-white/5"
+                      className="p-3 rounded bg-white border border-gray-200 shadow-sm"
                     >
-                      <span className="text-[10px] uppercase tracking-wider text-brand-gold block font-semibold">
+                      <span className="text-[10px] uppercase tracking-wider text-brand-primary block font-bold">
                         {pill.label}
                       </span>
-                      <span className="text-xs sm:text-sm text-brand-textWhite font-medium">
+                      <span className="text-xs sm:text-sm text-brand-textDark font-semibold">
                         {pill.val}
                       </span>
                     </div>
@@ -438,12 +437,12 @@ export default function HomePage() {
             </div>
 
             {/* Right Box: Live Social & Commercial Hub */}
-            <div className="lg:col-span-5 gold-card p-6 sm:p-8 flex flex-col justify-between">
+            <div className="lg:col-span-5 gold-card p-6 sm:p-8 flex flex-col justify-between bg-white border border-gray-200">
               <div>
-                <span className="text-[11px] uppercase tracking-[0.2em] text-brand-gold font-bold">
+                <span className="text-[11px] uppercase tracking-[0.2em] text-brand-primary font-bold">
                   TRATO DIRECTO CON EL EXPORTADOR
                 </span>
-                <h3 className="font-serif text-2xl font-bold text-brand-textWhite mt-1 mb-6">
+                <h3 className="font-serif text-2xl font-bold text-brand-textDark mt-1 mb-6">
                   Canales Oficiales en Vivo
                 </h3>
 
@@ -460,15 +459,15 @@ export default function HomePage() {
                         <Phone size={20} />
                       </div>
                       <div>
-                        <div className="text-sm font-bold text-white group-hover:text-[#25D366] transition-colors">
+                        <div className="text-sm font-bold text-brand-textDark group-hover:text-[#1eb354] transition-colors">
                           +591 71791570
                         </div>
-                        <div className="text-xs text-brand-dim">
+                        <div className="text-xs text-brand-textMuted font-medium">
                           WhatsApp Business · Atención Inmediata
                         </div>
                       </div>
                     </div>
-                    <span className="text-xs font-semibold text-[#25D366] group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
+                    <span className="text-xs font-bold text-[#1eb354] group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
                       Chatear <ArrowRight size={12} />
                     </span>
                   </a>
@@ -485,15 +484,15 @@ export default function HomePage() {
                         <Instagram size={20} />
                       </div>
                       <div>
-                        <div className="text-sm font-bold text-white group-hover:text-[#E1306C] transition-colors">
+                        <div className="text-sm font-bold text-brand-textDark group-hover:text-[#E1306C] transition-colors">
                           @doctorvico25
                         </div>
-                        <div className="text-xs text-brand-dim">
+                        <div className="text-xs text-brand-textMuted font-medium">
                           Reels, cosechas andinas y cataciones
                         </div>
                       </div>
                     </div>
-                    <span className="text-xs font-semibold text-[#E1306C] group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
+                    <span className="text-xs font-bold text-[#E1306C] group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
                       Seguir <ArrowRight size={12} />
                     </span>
                   </a>
@@ -510,15 +509,15 @@ export default function HomePage() {
                         <Facebook size={20} />
                       </div>
                       <div>
-                        <div className="text-sm font-bold text-white group-hover:text-[#1877F2] transition-colors">
+                        <div className="text-sm font-bold text-brand-textDark group-hover:text-[#1877F2] transition-colors">
                           Vicoarraz
                         </div>
-                        <div className="text-xs text-brand-dim">
+                        <div className="text-xs text-brand-textMuted font-medium">
                           Comunidad cafetera y novedades
                         </div>
                       </div>
                     </div>
-                    <span className="text-xs font-semibold text-[#1877F2] group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
+                    <span className="text-xs font-bold text-[#1877F2] group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
                       Visitar <ArrowRight size={12} />
                     </span>
                   </a>
@@ -526,18 +525,18 @@ export default function HomePage() {
               </div>
 
               {/* Sample Request CTA Callout */}
-              <div className="mt-8 p-4 rounded-xl bg-brand-gold/10 border border-brand-gold/30 flex items-center justify-between gap-4">
+              <div className="mt-8 p-4 rounded-xl bg-brand-primaryMuted border border-brand-primary/20 flex items-center justify-between gap-4">
                 <div>
-                  <div className="text-sm font-bold text-brand-textWhite">
+                  <div className="text-sm font-bold text-brand-primary">
                     ¿Deseas evaluar muestras?
                   </div>
-                  <p className="text-xs text-brand-muted">
+                  <p className="text-xs text-brand-textMuted font-medium">
                     Despachamos sets en café verde a tostadurías calificadas.
                   </p>
                 </div>
                 <Link
                   href="/cotizar"
-                  className="btn-gold-solid text-[11px] py-2 px-3 whitespace-nowrap flex-shrink-0"
+                  className="btn-primary-solid text-[11px] py-2 px-3 whitespace-nowrap flex-shrink-0"
                 >
                   Solicitar Muestra
                 </Link>

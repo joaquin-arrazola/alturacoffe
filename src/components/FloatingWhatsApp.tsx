@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import { MessageCircle } from "lucide-react";
 
 export const FloatingWhatsApp: React.FC = () => {
   const [showTooltip, setShowTooltip] = useState(true);
@@ -10,7 +9,7 @@ export const FloatingWhatsApp: React.FC = () => {
     <div className="fixed bottom-6 right-6 z-40 flex items-center group">
       {/* Tooltip */}
       {showTooltip && (
-        <div className="hidden sm:block mr-3 py-1.5 px-3 bg-[#12100e] text-brand-gold text-xs font-semibold rounded-md border border-brand-gold/30 shadow-xl pointer-events-none transition-all duration-300">
+        <div className="hidden sm:block mr-3 py-1.5 px-3 bg-white text-brand-primary text-xs font-bold rounded-full border border-gray-200 shadow-lg pointer-events-none transition-all duration-300">
           ¡Cotizá tu lote por WhatsApp!
         </div>
       )}

@@ -35,7 +35,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" className="scroll-smooth">
-      <body className="min-h-screen flex flex-col bg-brand-dark text-brand-text antialiased">
+      <body className="min-h-screen flex flex-col bg-brand-bg text-brand-textBody antialiased">
         <Header />
         <main className="flex-grow">{children}</main>
         <Footer />
