@@ -109,27 +109,27 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Left Column: Card Showcase */}
             <div className="lg:col-span-5 flex justify-center">
-              <div className="w-full max-w-md bg-white/95 backdrop-blur-xl border border-gray-200/90 rounded-2xl p-8 sm:p-10 text-center shadow-soft-lg relative group transition-all duration-300">
+              <div className="w-full max-w-md bg-white/95 backdrop-blur-xl border border-gray-200/90 rounded-2xl p-6 sm:p-8 text-center shadow-soft-lg relative group transition-all duration-300">
                 {/* Emerald ambient glow */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-brand-primary/10 rounded-full blur-3xl pointer-events-none" />
 
                 <div className="relative z-10 flex flex-col items-center">
-                  <BrandLogo variant="stacked" />
+                  <BrandLogo variant="showcase" priority />
 
-                  {/* Trust Pills */}
-                  <div className="flex flex-wrap items-center justify-center gap-2 mt-8">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-brand-bg border border-gray-200 rounded-full text-xs font-semibold text-brand-primary">
-                      <span className="w-1.5 h-1.5 rounded-full bg-brand-primary" />
-                      Bolivia
-                    </span>
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-brand-bg border border-gray-200 rounded-full text-xs font-semibold text-brand-primary">
-                      <span className="w-1.5 h-1.5 rounded-full bg-brand-primary" />
-                      2.400 msnm
-                    </span>
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-brand-bg border border-gray-200 rounded-full text-xs font-semibold text-brand-primary">
-                      <span className="w-1.5 h-1.5 rounded-full bg-brand-primary" />
-                      SCA 84+ Certificado
-                    </span>
+                  {/* Trust Highlights */}
+                  <div className="w-full mt-6 pt-5 border-t border-gray-200/80 grid grid-cols-3 gap-2 text-center">
+                    <div className="p-2.5 rounded-xl bg-gray-50/90 border border-gray-200/60">
+                      <div className="text-xs font-bold text-brand-primary">Origen</div>
+                      <div className="text-[11px] text-brand-textMuted font-medium">Bolivia</div>
+                    </div>
+                    <div className="p-2.5 rounded-xl bg-gray-50/90 border border-gray-200/60">
+                      <div className="text-xs font-bold text-brand-primary">Altitud</div>
+                      <div className="text-[11px] text-brand-textMuted font-medium">2.400 msnm</div>
+                    </div>
+                    <div className="p-2.5 rounded-xl bg-gray-50/90 border border-gray-200/60">
+                      <div className="text-xs font-bold text-brand-primary">Calidad</div>
+                      <div className="text-[11px] text-brand-textMuted font-medium">SCA 84+</div>
+                    </div>
                   </div>
                 </div>
               </div>

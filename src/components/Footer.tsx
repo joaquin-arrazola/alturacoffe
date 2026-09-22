@@ -10,7 +10,7 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-12 border-b border-gray-300">
           {/* Brand Info */}
           <div className="lg:col-span-5">
-            <BrandLogo href="/" />
+            <BrandLogo href="/" variant="footer" />
             <p className="mt-4 text-sm text-brand-textBody leading-relaxed max-w-sm">
               Café de especialidad de alta montaña boliviana, cultivado con tradición
               ancestral en los Andes y exportado con excelencia técnica a tostadurías
