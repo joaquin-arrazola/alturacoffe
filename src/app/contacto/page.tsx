@@ -154,14 +154,14 @@ export default function ContactoPage() {
                 </a> */}
 
                 <a
-                  href="https://facebook.com/Vicoarraz"
+                  href="https://www.facebook.com/people/Altura-Coffee-Exports/61594757186363/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-brand-textBody hover:text-brand-primary transition-colors text-sm font-medium"
                 >
                   <Facebook size={18} className="text-brand-primary" />
                   <span>
-                    Facebook: <strong className="text-brand-textDark">Vicoarraz</strong>
+                    Facebook: <strong className="text-brand-textDark">Altura Coffee Exports</strong>
                   </span>
                 </a>
               </div>

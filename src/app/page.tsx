@@ -499,7 +499,7 @@ export default function HomePage() {
 
                   {/* Facebook */}
                   <a
-                    href="https://facebook.com/Vicoarraz"
+                    href="https://www.facebook.com/people/Altura-Coffee-Exports/61594757186363/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-4 rounded-xl bg-[#1877F2]/10 border border-[#1877F2]/30 hover:border-[#1877F2] flex items-center justify-between group transition-all"
@@ -510,7 +510,7 @@ export default function HomePage() {
                       </div>
                       <div>
                         <div className="text-sm font-bold text-brand-textDark group-hover:text-[#1877F2] transition-colors">
-                          Vicoarraz
+                          Altura Coffee Exports
                         </div>
                         <div className="text-xs text-brand-textMuted font-medium">
                           Comunidad cafetera y novedades

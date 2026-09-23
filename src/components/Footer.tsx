@@ -86,13 +86,13 @@ export const Footer: React.FC = () => {
               </li> */}
               <li>
                 <a
-                  href="https://facebook.com/Vicoarraz"
+                  href="https://www.facebook.com/people/Altura-Coffee-Exports/61594757186363/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2.5 text-brand-textBody hover:text-brand-primary transition-colors"
                 >
                   <Facebook size={16} className="text-brand-primary" />
-                  <span>Vicoarraz</span>
+                  <span>Altura Coffee Exports</span>
                 </a>
               </li>
             </ul>
