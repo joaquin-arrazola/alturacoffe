@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { BrandLogo } from "./BrandLogo";
-import { Phone, Instagram, Facebook, Lock, ArrowRight } from "lucide-react";
+import { Phone, /* Instagram, */ Facebook, Lock, ArrowRight } from "lucide-react";
 
 export const Footer: React.FC = () => {
   return (
@@ -72,7 +72,8 @@ export const Footer: React.FC = () => {
                   <span>+591 71791570</span>
                 </a>
               </li>
-              <li>
+              {/* Instagram (Oculto temporalmente / Hidden for now - descomentar para reactivar) */}
+              {/* <li>
                 <a
                   href="https://instagram.com/doctorvico25"
                   target="_blank"
@@ -82,7 +83,7 @@ export const Footer: React.FC = () => {
                   <Instagram size={16} className="text-brand-primary" />
                   <span>@doctorvico25</span>
                 </a>
-              </li>
+              </li> */}
               <li>
                 <a
                   href="https://facebook.com/Vicoarraz"

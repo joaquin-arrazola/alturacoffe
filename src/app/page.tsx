@@ -11,7 +11,7 @@ import {
   ChevronRight,
   MapPin,
   ArrowRight,
-  Instagram,
+  /* Instagram, */
   Facebook,
   Phone,
   Layers,
@@ -472,8 +472,8 @@ export default function HomePage() {
                     </span>
                   </a>
 
-                  {/* Instagram */}
-                  <a
+                  {/* Instagram (Oculto temporalmente / Hidden for now - descomentar para reactivar) */}
+                  {/* <a
                     href="https://instagram.com/doctorvico25"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -495,7 +495,7 @@ export default function HomePage() {
                     <span className="text-xs font-bold text-[#E1306C] group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
                       Seguir <ArrowRight size={12} />
                     </span>
-                  </a>
+                  </a> */}
 
                   {/* Facebook */}
                   <a

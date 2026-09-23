@@ -6,7 +6,7 @@ import {
   Phone,
   Mail,
   Clock,
-  Instagram,
+  /* Instagram, */
   Facebook,
   ArrowRight,
   Send,
@@ -140,7 +140,8 @@ export default function ContactoPage() {
                 Redes Sociales Oficiales
               </h5>
               <div className="space-y-3">
-                <a
+                {/* Instagram (Oculto temporalmente / Hidden for now - descomentar para reactivar) */}
+                {/* <a
                   href="https://instagram.com/doctorvico25"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -150,7 +151,7 @@ export default function ContactoPage() {
                   <span>
                     Instagram: <strong className="text-brand-textDark">@doctorvico25</strong>
                   </span>
-                </a>
+                </a> */}
 
                 <a
                   href="https://facebook.com/Vicoarraz"
